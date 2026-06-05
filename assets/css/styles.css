@@ -299,3 +299,14 @@ h2 {
   .portrait-wrap { min-height: 360px; }
   .card, .paper-card, .cv-panel { border-radius: 1rem; padding: 1rem; }
 }
+.section-heading {
+  grid-template-columns: 1fr;
+}
+
+.section-heading > div {
+  max-width: 850px;
+}
+
+.section-intro {
+  max-width: 850px;
+}
