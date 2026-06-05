@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://craigpesme.github.io/sitemap.xml
