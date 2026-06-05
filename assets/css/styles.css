@@ -310,3 +310,24 @@ h2 {
 .section-intro {
   max-width: 850px;
 }
+
+
+.hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  gap: 3rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+}
+
+.hero-text {
+  font-size: 1rem;
+  max-width: 680px;
+}
+
+.portrait-wrap {
+  max-width: 260px;
+}
+
