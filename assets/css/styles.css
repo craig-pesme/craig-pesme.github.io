@@ -345,26 +345,36 @@ h2 {
   .portrait-wrap { width: 215px; min-height: 0; }
 }
 
-.contact-photo {
-margin: 0;
+.contact-panel {
 border: 1px solid var(--line);
-border-radius: 1.2rem;
-overflow: hidden;
+border-radius: 1.35rem;
 background: rgba(255,253,249,.75);
+padding: 1.25rem 1.35rem;
+max-width: 720px;
 }
 
-.contact-photo img {
-width: 100%;
-height: 170px;
-object-fit: cover;
-object-position: center;
-filter: grayscale(100%);
+.contact-row {
+display: grid;
+grid-template-columns: 110px minmax(0, 1fr);
+gap: 1rem;
+align-items: baseline;
+padding: 0.55rem 0;
 }
 
-.contact-photo figcaption {
-padding: 0.75rem 0.9rem;
+.contact-row + .contact-row {
+border-top: 1px solid var(--line);
+}
+
+.contact-row .label {
 color: var(--muted);
 font-size: 0.9rem;
-line-height: 1.4;
 }
+
+@media (max-width: 520px) {
+.contact-row {
+grid-template-columns: 1fr;
+gap: 0.15rem;
+}
+}
+
 
