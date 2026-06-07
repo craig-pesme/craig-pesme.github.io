@@ -362,12 +362,29 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(320px, 420px);
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .section-heading {
+  margin-bottom: 1.5rem;
+}
+
 .contact-panel {
   border: 1px solid var(--line);
   border-radius: 1.35rem;
   background: rgba(255,253,249,.75);
-  padding: 1.1rem 1.2rem;
-  max-width: 540px;
+  padding: 1.15rem 1.25rem;
+  max-width: 560px;
 }
 
 .contact-row {
@@ -375,7 +392,7 @@ h2 {
   grid-template-columns: 95px minmax(0, 1fr);
   gap: 0.9rem;
   align-items: baseline;
-  padding: 0.5rem 0;
+  padding: 0.55rem 0;
 }
 
 .contact-row + .contact-row {
@@ -389,32 +406,30 @@ h2 {
 
 .contact-mountain {
   margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 1.35rem;
-  overflow: hidden;
-  background: rgba(255,253,249,.75);
+  display: grid;
+  grid-template-rows: 1fr auto;
   height: 100%;
-  min-height: 250px;
+  min-height: 330px;
+  align-self: stretch;
 }
 
 .contact-mountain img {
   width: 100%;
-  height: calc(100% - 2.7rem);
-  min-height: 215px;
+  height: 100%;
+  min-height: 290px;
   object-fit: cover;
   object-position: center;
+  border-radius: 0.9rem;
 }
 
 .contact-mountain figcaption {
-  margin: 0;
-  padding: 0.65rem 0.8rem;
+  margin: 0.55rem 0 0;
   color: var(--muted);
   font-size: 0.88rem;
   line-height: 1.35;
-  border-top: 1px solid var(--line);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .contact-layout {
     grid-template-columns: 1fr;
   }
@@ -423,7 +438,12 @@ h2 {
     max-width: none;
   }
 
+  .contact-mountain {
+    min-height: 0;
+  }
+
   .contact-mountain img {
-    height: 220px;
+    height: 240px;
+    min-height: 0;
   }
 }
